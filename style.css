@@ -1,0 +1,259 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Exo', sans-serif;
+    background-color: #121212; /* charcoal black - dark base */
+    color: #A35D6A; /* dusky rose - warm, soft text */
+}
+
+p {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.row.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.modal-footer {
+    text-align: center;
+}
+
+.list-group-item {
+    border-radius: 0;
+    border: none;
+    background-color: #5A1B1B; /* deep burgundy */
+    color: #FFB347; /* amber glow */
+}
+
+.badge {
+    background: #BFA2DB; /* soft lavender */
+    color: #121212; /* charcoal black text for contrast */
+    font-weight: bold;
+}
+
+li {
+    font-size: 1.3em;
+    color: #FFB347; /* amber glow */
+}
+
+/* Modal & Lists */
+#review {
+    font-size: 30px;
+    padding-top: 5vh;
+    text-align: center;
+    animation-delay: 1s;
+    color: #BFA2DB; /* soft lavender */
+}
+
+#viewAllSpace { height: 15vh; }
+#truthSpace { height: 25vh; }
+#statementSpace {
+    height: 20vh;
+    padding: 0 2%;
+    text-align: center;
+    font-size: 2em;
+    color: #FFB347; /* amber glow */
+}
+#dareSpace { height: 25vh; }
+#resetSpace { height: 10vh; }
+
+#edit {
+    display: none;
+    height: 100vh;
+}
+
+#addSpace { height: 20vh; }
+
+#truthInput, #dareInput {
+    height: 20vh;
+    width: 70%;
+    margin-left: 15%;
+    border: none;
+    background: #5A1B1B; /* deep burgundy */
+    color: #FFB347; /* amber glow */
+    border-radius: 4px;
+    font-size: 1.2em;
+    text-align: center;
+    display: inline;
+}
+
+#dareInput, #checkDareButton { display: none; }
+
+#truthInput:focus, #truthInput:active,
+#dareInput:focus, #dareInput:active {
+    outline: none;
+    box-shadow: 0 0 12px #FFB347; /* amber glow */
+    border-color: transparent;
+}
+
+#checkTruth, #checkDare {
+    width: 15%;
+    font-size: 1.2em;
+    display: inline;
+    color: #FFB347; /* amber glow */
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+/* Lists and Progress */
+#newTruthList, #newDareList {
+    max-height: 60vh;
+    overflow-y: auto;
+    color: #FFB347; /* amber glow */
+}
+
+#newDareList { display: none; }
+
+#inputSpace {
+    height: 60vh;
+    overflow: auto;
+}
+
+#progressSpace {
+    height: 20vh;
+}
+
+/* Buttons */
+button, .btn {
+    background: transparent;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    color: #BFA2DB; /* soft lavender */
+    font-weight: 600;
+}
+
+.btn-block {
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.arrow-button {
+    font-size: 1em;
+    color: #FFB347; /* amber glow */
+}
+
+.arrow-button:hover,
+.arrow-button:focus,
+.arrow-button:active,
+.badge:hover,
+.badge:focus,
+.badge:active,
+#close:hover,
+#close:focus,
+#close:active,
+#truth:hover,
+#truth:focus,
+#truth:active,
+#dare:hover,
+#dare:focus,
+#dare:active,
+#reset:hover,
+#reset:focus,
+#reset:active,
+#customize:hover,
+#customize:focus,
+#customize:active,
+#checkTruthButton:hover,
+#checkTruthButton:focus,
+#checkTruthButton:active,
+#checkDareButton:hover,
+#checkDareButton:focus,
+#checkDareButton:active,
+#next:hover,
+#next:focus,
+#next:active,
+#save:hover,
+#save:focus,
+#save:active {
+    color: #FFB347; /* amber glow highlight on hover */
+    outline: none;
+}
+
+#truth, #dare {
+    height: 25vh;
+    font-size: 3em;
+    color: #BFA2DB; /* soft lavender */
+}
+
+#reset {
+    display: none;
+    height: 15vh;
+    font-size: 2em;
+    color: #FFB347; /* amber glow */
+}
+
+#reset:disabled {
+    background: #121212;
+    color: #121212;
+}
+
+#customize {
+    height: 15vh;
+    font-size: 1.5em;
+    animation-delay: 2s;
+    color: #BFA2DB; /* soft lavender */
+}
+
+#checkTruthButton, #checkDareButton {
+    background: transparent;
+    color: #FFB347; /* amber glow */
+}
+
+#next, #save {
+    height: 20vh;
+    font-size: 2em;
+    margin: 0;
+    color: #BFA2DB; /* soft lavender */
+}
+
+#save { display: none; }
+
+/* Utility Classes */
+.white-color { color: #FFB347; } /* amber glow */
+.black-color { color: #121212; } /* charcoal black */
+.gray-color  { color: #A35D6A; } /* dusky rose */
+.black-bg    { background: #5A1B1B; } /* deep burgundy */
+.white-bg    { background: #121212; } /* charcoal black */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #truthInput, #dareInput {
+        width: 90%;
+        margin-left: 5%;
+        font-size: 1em;
+    }
+
+    #truth, #dare {
+        font-size: 2em;
+        height: 20vh;
+    }
+
+    #statementSpace {
+        font-size: 1.5em;
+    }
+
+    #next, #save {
+        font-size: 1.5em;
+        height: 15vh;
+    }
+}
